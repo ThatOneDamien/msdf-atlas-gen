@@ -8,6 +8,9 @@
 .vs/
 .vscode/
 .DS_Store
+bin
+bin-int
+**.vcxproj**
 *.exe
 *.zip
 *.user
