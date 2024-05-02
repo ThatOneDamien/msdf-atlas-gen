@@ -3,9 +3,10 @@ project "msdfgen"
     location "msdfgen"
 	language "C++"
 	cppdialect "C++17"
+    staticruntime "on"
 
-	targetdir ("msdfgen/bin/" .. outdir .. "/%{prj.name}")
-	objdir ("msdfgen/bin-int/" .. outdir .. "/%{prj.name}")
+	targetdir ("%{wks.location}/bin/" .. outdir .. "/%{prj.name}")
+	objdir ("%{wks.location}/bin/int/" .. outdir .. "/%{prj.name}")
 
 	files
 	{
@@ -50,9 +51,10 @@ project "msdf-atlas-gen"
 	kind "StaticLib"
 	language "C++"
 	cppdialect "C++17"
+    staticruntime "on"
 
-	targetdir ("bin/" .. outdir .. "/%{prj.name}")
-	objdir ("bin-int/" .. outdir .. "/%{prj.name}")
+	targetdir ("%{wks.location}/bin/" .. outdir .. "/%{prj.name}")
+	objdir ("%{wks.location}/bin/int/" .. outdir .. "/%{prj.name}")
 
 	files
 	{
@@ -64,6 +66,7 @@ project "msdf-atlas-gen"
 	includedirs
 	{
 		"msdf-atlas-gen",
+        "artery-font-format",
 		"msdfgen",
 		"msdfgen/include"
 	}
