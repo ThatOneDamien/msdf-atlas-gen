@@ -2,7 +2,7 @@ project "msdfgen"
 	kind "StaticLib"
     location "msdfgen"
 	language "C++"
-	cppdialect "C++17"
+	cppdialect "C++11"
     staticruntime "on"
 
 	targetdir ("%{wks.location}/bin/" .. outdir .. "/%{prj.name}")
